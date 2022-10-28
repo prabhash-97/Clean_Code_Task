@@ -1,67 +1,78 @@
 const Plane = require('./Plane');
 
-class experimentalPlane   extends Plane
+class experimentalPlane extends Plane
 {
 
-    constructor(model, maxSpeed, maxFlightDistance, maxLoadCapacity, type, classificationLevel)  {
+    constructor(model, maxSpeed, maxFlightDistance, maxLoadCapacity, type, classificationLevel)  
+	{
         super(model, maxSpeed, maxFlightDistance, maxLoadCapacity);
-        this._model = model;
-        this._maxSpeed = maxSpeed;
-        this._maxFlightDistance = maxFlightDistance;
-        this._maxLoadCapacity = maxLoadCapacity;
-        this._type = type;
-        this._classificationLevel = classificationLevel;
-
+        this.model = model;
+        this.maxSpeed = maxSpeed;
+        this.maxFlightDistance = maxFlightDistance;
+        this.maxLoadCapacity = maxLoadCapacity;
+        this.type = type;
+        this.classificationLevel = classificationLevel;
     }
 
 
-    get model()
+    GetModel()
     {
-        return this._model;
+        return this.model;
     }
 
-    set model(value) {
-        this._model = value;
+    SetModel(value) 
+	{
+        this.model = value;
     }
 
-    get maxSpeed() {
-        return this._maxSpeed;
+    GetMaxSpeed()
+	{
+        return this.maxSpeed;
     }
 
-    set maxSpeed(value) {
-        this._maxSpeed = value;
+    SetMaxSpeed(value) 
+	{
+        this.MaxSpeed = value;
     }
 
-    get maxFlightDistance() {
-        return this._maxFlightDistance;
+    GetMaxFlightDistance() 
+	{
+        return this.maxFlightDistance;
     }
 
-    set maxFlightDistance(value) {
-        this._maxFlightDistance = value;
+    SetMaxFlightDistance(value) 
+	{
+        this.maxFlightDistance = value;
     }
 
-    get maxLoadCapacity() {
-        return this._maxLoadCapacity;
+    GetMaxLoadCapacity() 
+	{
+        return this.maxLoadCapacity;
     }
 
-    set maxLoadCapacity(value) {
-        this._maxLoadCapacity = value;
+    set maxLoadCapacity(value) 
+	{
+        this.maxLoadCapacity = value;
     }
 
-    get type() {
-        return this._type;
+    GetType() 
+	{
+        return this.Type;
     }
 
-    set type(value) {
-        this._type = value;
+    SetType(value) 
+	{
+        this.type = value;
     }
 
-    get classificationLevel() {
-        return this._classificationLevel;
+    GetClassificationLevel() 
+	{
+        return this.classificationLevel;
     }
 
-    set classificationLevel(value) {
-        this._classificationLevel = value;
+    SetClassificationLevel(value) 
+	{
+        this.classificationLevel = value;
     }
 }
 

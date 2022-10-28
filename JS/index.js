@@ -30,11 +30,11 @@ const ClassificationLevel = require('./models/ClassificationLevel');
     ];
 
     let airport = new Airport(planes);
-    let militaryAirport = new Airport(airport.getMilitaryPlanes());
-    let passengerAirport = new Airport(airport.getPasPl());
+    let militaryAirport = new Airport(airport.GetMilitaryPlanes());
+    let passengerAirport = new Airport(airport.GetPasPl());
 	
-    console.log(`Military airport sorted by max distance: ${Airport.print(militaryAirport.sortByMaxDistance())}`);
-    console.log(`Passenger airport sorted by max speed: ${Airport.print(passengerAirport.sortByMaxSpeed())}`);
-    console.log(`Plane with max passenger capacity: ${Airport.print(passengerAirport.getPassengerPlaneWithMaxPassengersCapacity())}`);
+    console.log(`Military airport sorted by max distance: ${Airport.print(militaryAirport.SortByMaxDistance())}`);
+    console.log(`Passenger airport sorted by max speed: ${Airport.print(passengerAirport.SortByMaxSpeed())}`);
+    console.log(`Plane with max passenger capacity: ${Airport.print(passengerAirport.GetPassengerPlaneWithMaxPassengersCapacity())}`);
 	
 })();
