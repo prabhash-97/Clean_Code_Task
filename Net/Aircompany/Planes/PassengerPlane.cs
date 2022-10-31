@@ -4,12 +4,12 @@ namespace Aircompany.Planes
 {
     public class PassengerPlane : Plane
     {
-        public int PassengersCapacity;
+        public int passengersCapacity;
 
         public PassengerPlane(string model, int maxSpeed, int maxFlightDistance, int maxLoadCapacity, int passengersCapacity)
             :base(model, maxSpeed, maxFlightDistance, maxLoadCapacity)
         {
-            PassengersCapacity = passengersCapacity;
+            passengersCapacity = passengersCapacity;
         }
 
         public override bool Equals(object obj)
@@ -17,27 +17,27 @@ namespace Aircompany.Planes
             var plane = obj as PassengerPlane;
             return plane != null &&
                    base.Equals(obj) &&
-                   PassengersCapacity == plane.PassengersCapacity;
+                   passengersCapacity == plane.passengersCapacity;
         }
 
         public override int GetHashCode()
         {
             var hashCode = 751774561;
             hashCode = hashCode * -1521134295 + base.GetHashCode();
-            hashCode = hashCode * -1521134295 + PassengersCapacity.GetHashCode();
+            hashCode = hashCode * -1521134295 + passengersCapacity.GetHashCode();
             return hashCode;
         }
 
         public int PassengersCapacityIs()
         {
-            return PassengersCapacity;
+            return passengersCapacity;
         }
 
        
         public override string ToString()
         {
             return base.ToString().Replace("}",", passengersCapacity=" + 
-                                        PassengersCapacity +
+                                        passengersCapacity +
                                         '}');
         }       
         
